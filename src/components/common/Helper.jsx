@@ -12,3 +12,9 @@ export const SliderComplete = [
   { reverse: true },
   { reverse: false },
 ];
+// click change
+export const selectData = [
+  { name: "No 1" },
+  { name: "No 2" },
+  { name: "No 3" },
+];

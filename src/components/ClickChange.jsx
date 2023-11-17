@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { selectData } from "./common/Helper";
+
 const ClickChange = () => {
   const [inputData, setInputData] = useState("Select");
   const [height, setHeight] = useState(false);
@@ -18,36 +20,17 @@ const ClickChange = () => {
             }`}
             onClick={() => setHeight(false)}
           >
-            <p
-              onClick={() => setInputData("No 1")}
-              className="cursor-pointer inline fs-5 text-white py-1 my-1 px-3 border-white border-2"
-            >
-              No 1
-            </p>
-            <p
-              onClick={() => setInputData("No 2")}
-              className="cursor-pointer inline fs-5 text-white py-1 my-1 px-3 border-white border-2"
-            >
-              No 2
-            </p>
-            <p
-              onClick={() => setInputData("No 3")}
-              className="cursor-pointer inline fs-5 text-white py-1 my-1 px-3 border-white border-2"
-            >
-              No 3
-            </p>
-            <p
-              onClick={() => setInputData("No 4")}
-              className="cursor-pointer inline fs-5 text-white py-1 my-1 px-3 border-white border-2"
-            >
-              No 4
-            </p>
-            <p
-              onClick={() => setInputData("No 5")}
-              className="cursor-pointer inline fs-5 text-white py-1 my-1 px-3 border-white border-2"
-            >
-              No 5
-            </p>
+            {selectData.map((select, i) => {
+              return (
+                <p
+                  onClick={() => setInputData(select.name)}
+                  key={i}
+                  className="cursor-pointer inline fs-5 text-white py-1 my-1 px-3 border-white border-2"
+                >
+                  {select.name}
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>

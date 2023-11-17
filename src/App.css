@@ -9,3 +9,6 @@
 .cross .line:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }
+.slick-arrow {
+  display: none !important;
+}

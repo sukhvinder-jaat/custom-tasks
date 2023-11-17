@@ -184,7 +184,9 @@ const SideBar = () => {
                 </p>
               </div>
               <button
-                className={`${light ? "bg-black text-white" : "bg-white text-black"}`}
+                className={`${
+                  light ? "bg-black text-white" : "bg-white text-black"
+                }`}
                 onClick={() => setLight(!light)}
               >
                 {light ? "Dark" : "Light"} mode
